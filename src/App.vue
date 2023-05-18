@@ -31,12 +31,15 @@ export default {
   methods:{
     toggleDone(index){
       this.todos[index].done = !this.todos[index].done;
-      this.updateData(this.todos.at(index));
+
+
+      this.saveDataFromLocalStorage();
     },
     deleteTodo(index){
       console.log("App: " + index);
-      this.deleteData(this.todos.at(index));
       this.todos.splice(index,1);
+      this.saveDataFromLocalStorage();
+      
     },
     
     addTodo(name){
@@ -46,7 +49,7 @@ export default {
       const todo = {_id: uuidv4(), creationTimestamp: new Date(), todo:name, done:false}
       console.log(this.i);
       this.todos.push(todo);
-      this.saveData(todo);
+      this.saveDataFromLocalStorage();
     },
     saveDataFromLocalStorage(){
       localStorage.setItem("todos", JSON.stringify(this.todos))
@@ -59,68 +62,9 @@ export default {
       this.todo = [];
       }
     },
-    //Talk to API
-    fetchData(){
-      fetch('api/todos')
-        .then(response => response.json())
-        .then(data => {
-          this.todos = data;
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    },
-    deleteData(todo){
-      fetch('api/todos/'+ todo._id, {
-        method: 'DELETE',
-        
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    },
-    updateData(todo){
-      fetch('api/todos/'+ todo._id, {
-        method: 'PUT',
-        body: JSON.stringify(todo),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    },
-    saveData(todo){
-      fetch('api/todos', {
-        method: 'POST',
-        body: JSON.stringify(todo),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    }
     },
   mounted(){ //Called before loading 
-    this.fetchData();
+    this.fetchDataFromLocalStorage();
   },
   components: {
     ToDoComponent

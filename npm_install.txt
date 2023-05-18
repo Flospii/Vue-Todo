@@ -1,0 +1,14 @@
+To install all Components for this:
+Node.js from web
+Vue: npm install vue@latest
+Vue CLI: npm i -g @vue/cli
+Install Express and other dependencies: npm i express cors body-parser mongodb
+DevDependencie nodemon: npm i -D nodemon
+Mongodb compass installieren.
+
+Changes in package.json:
+    Added 2 Scripts:
+        "start": "node server/index.js",
+        "dev": "nodemon server/index.js"
+        create a server folder and make a index.js file
+

@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "node server/index.js",
-    "dev": "nodemon server/index.js"
+    "start": "node dist/index.js",
+    "dev": "nodemon dist/index.js"
   },
   "dependencies": {
     "autoprefixer": "^10",

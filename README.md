@@ -31,7 +31,7 @@ npm i -g @vue/cli
 ```
 npx run build
 ```
-Nun kann man sich die Webapp starten, indem man folgenden Befehl eingibt:
+Nun kann man die Webapp starten, indem man folgenden Befehl eingibt:
 ```
 npm run serve
 ```

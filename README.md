@@ -52,6 +52,12 @@ npx cap run ios
 ```
 Je nachdem, welche Befehle Sie ausgeführt haben, werden Sie nun neue Ordner mit den Namen „android“ und „ios“ bemerken. Sie können diese Ordner mit Android Studio für Android und Xcode für iOS öffnen.
 
+### Die App synchron halten
+Wenn Sie Änderungen an der Web-App vornehmen und diese erstellen, aktualisiert Capacitor Ihre Ordner für mobile Apps nicht automatisch. Dazu müssen Sie den Sync-Befehl verwenden.
+```
+npx cap sync
+```
+
 ## Plugin Installation
 ```
 npm install @capacitor/geolocation

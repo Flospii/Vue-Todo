@@ -2,6 +2,7 @@
 
 ## Environment Setup
 Node.js v12+ herunterladen und installieren. Link: https://nodejs.org/en
+
 Entweder für Android oder iOS Entwicklungsumgebung herunterladen.
 ### Android
 Android Studio herunterladen und installieren.
@@ -9,6 +10,7 @@ Android Studio herunterladen und installieren.
 - XCode
 - XCode Command Line Tools
 - Cocoapods
+
 Im Terminal ausführen:
 ```
 sudo gem install cocoapods

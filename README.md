@@ -37,6 +37,10 @@ npm run serve
 ```
 STRG+C um Webapp wieder zu stoppen.
 ### Capacitor installieren
+```
+npm install @capacitor/cli @capacitor/core
+npx cap init
+```
 Dadurch wird CapacitorJS neben seiner Befehlszeilenschnittstelle zu Ihrem Projekt hinzugefügt und auch eine Konfigurationsdatei mit dem Namen „capacitor.config.json“ generiert.
 #### Für Android
 ```

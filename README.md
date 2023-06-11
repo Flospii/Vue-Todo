@@ -5,7 +5,7 @@ Node.js v12+ herunterladen und installieren. Link: https://nodejs.org/en
 
 Entweder für Android oder iOS Entwicklungsumgebung herunterladen.
 ### Android
-Android Studio herunterladen und installieren.
+Android Studio herunterladen und installieren. Und eine Android SDK downloaden in Android Studio.
 ### iOS
 - XCode
 - XCode Command Line Tools

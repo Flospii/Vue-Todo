@@ -46,13 +46,11 @@ Dadurch wird CapacitorJS neben seiner Befehlszeilenschnittstelle zu Ihrem Projek
 ```
 npm install @capacitor/android
 npx cap add android
-npx cap run android
 ```
 #### Für iOS
 ```
 npm install @capacitor/ios
 npx cap add ios
-npx cap run ios
 ```
 Je nachdem, welche Befehle Sie ausgeführt haben, werden Sie nun neue Ordner mit den Namen „android“ und „ios“ bemerken. Sie können diese Ordner mit Android Studio für Android und Xcode für iOS öffnen.
 

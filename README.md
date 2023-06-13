@@ -15,6 +15,17 @@ Im Terminal ausführen:
 ```
 sudo gem install cocoapods
 ```
+Alternativer Weg um Cocoapods zu installieren:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+```
+brew install cocoapods
+```
+
+```
+pod --version
+```
 
 ## Project setup
 ### Vue installieren

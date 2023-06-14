@@ -1,7 +1,7 @@
 # VUE-Todo Bootcamp
 
 ## Environment Setup
-Node.js v12+ herunterladen und installieren. Link: https://nodejs.org/en
+Node.js v16+ herunterladen und installieren. Link: https://nodejs.org/en
 
 Entweder für Android oder iOS Entwicklungsumgebung herunterladen.
 ### Android

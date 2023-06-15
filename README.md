@@ -42,7 +42,7 @@ npm i -g @vue/cli
 
 ### Webapp builden
 ```
-npx run build
+npm run build
 ```
 Nun kann man die Webapp starten, indem man folgenden Befehl eingibt:
 ```

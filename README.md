@@ -84,3 +84,62 @@ npx cap sync
 npm install @capacitor/geolocation
 npx cap sync
 ```
+### Geolocation Code Anpassungen
+####App.vue:
+Im script Tag bei den Imports folgende Zeile einfügen
+```
+import { Geolocation } from '@capacitor/geolocation';
+```
+AddTodo Anpassung auf:
+```
+async addTodo(name){
+      if(name == null || name.trim() === ""){
+        return;
+      }
+
+      let coordinates = null; // Default value
+
+      try {
+        const position = await Geolocation.getCurrentPosition(); // Get current position
+        coordinates = {
+          latitude: position.coords.latitude, 
+          longitude: position.coords.longitude
+        };
+      } catch (error) {
+        console.error("Failed to get position:", error);
+      }
+
+      const todo = {_id: uuidv4(), creationTimestamp: new Date(), todo:name, done:false, coordinates: coordinates } 
+      
+
+      console.log(todo);
+      this.todos.push(todo);
+      this.saveDataFromLocalStorage();
+    },
+```
+#### TodoComponent.vue
+Im Template Tag eine Zeile unter "creationTimestamp" p-Tag einfügen:
+```
+<p v-if="todo.coordinates">Lat: {{ todo.coordinates.latitude }}, Lng: {{ todo.coordinates.longitude }}</p> <!-- Hier sind die Koordinaten -->
+```
+Anschließend
+```
+npm run build
+npx cap sync
+```
+#### Berechtigungen
+iOS:
+In info.plist Datei folgende 2 Reihen einfügen:
+```
+Privacy - Location Always Usage Description
+Privacy - Location When In Use Usage Description
+```
+
+Android:
+In AndroidManifest.xml folgende 3 uses-permission tags hinzufügen:
+```
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-feature android:name="android.hardware.location.gps" />
+```
+

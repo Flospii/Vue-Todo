@@ -85,7 +85,7 @@ npm install @capacitor/geolocation
 npx cap sync
 ```
 ### Geolocation Code Anpassungen
-####App.vue:
+#### App.vue:
 Im script Tag bei den Imports folgende Zeile einfügen
 ```
 import { Geolocation } from '@capacitor/geolocation';

@@ -1,5 +1,5 @@
 # VUE-Todo Bootcamp
-
+In diesem Bootcamp zeigen wir, wie man aus jeder Webapp eine mobile Cross-platform App umwandeln kann.
 ## Environment Setup
 Node.js v16+ herunterladen und installieren. Link: https://nodejs.org/en
 

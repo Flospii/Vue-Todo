@@ -143,3 +143,43 @@ In AndroidManifest.xml folgende 3 uses-permission tags hinzufügen:
 <uses-feature android:name="android.hardware.location.gps" />
 ```
 
+IONIC Framework
+Command prompt:
+“npm install @ionic/vue @ionic/vue-router”
+TodoComponent:
+<script>
+import { IonButton } from '@ionic/vue';
+export default {
+  components: { IonButton },
+
+<script>
+import { IonButton } from '@ionic/vue';
+export default {
+  components: { IonButton },
+
+main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+import './assets/tailwind.css'
+import { IonicVue } from '@ionic/vue';
+import '@ionic/vue/css/core.css';
+
+const app = createApp(App);
+app.use(IonicVue);
+app.mount('#app');
+
+
+<style scoped>
+.md .my-button {
+  --background: grey;
+  --color: white;
+}
+
+.ios .my-button{
+  --background: rgb(223, 183, 49);
+  --color: white;
+}
+</style>
+
+
+

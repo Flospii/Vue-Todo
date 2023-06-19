@@ -142,7 +142,7 @@ In AndroidManifest.xml folgende 3 uses-permission tags hinzufügen:
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-feature android:name="android.hardware.location.gps" />
 ```
-
+ ```
 IONIC Framework
 Command prompt:
 “npm install @ionic/vue @ionic/vue-router”
@@ -182,4 +182,4 @@ app.mount('#app');
 </style>
 
 
-
+```
